@@ -1,5 +1,6 @@
 # StepProgressbar-compose
 make your step progress bar (like instagram stroty indicator) easily on your project (compose)
+[Main Project](https://github.com/SudoDios/StepProgressbar)
 
 <img src="https://github.com/SudoDios/StepProgressbar/blob/master/app/src/main/ic_launcher-playstore.png" alt="drawing" width="160"/>
 
