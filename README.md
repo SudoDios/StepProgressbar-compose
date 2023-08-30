@@ -4,6 +4,8 @@ make your step progress bar (like instagram stroty indicator) easily on your pro
 
 <img src="https://github.com/SudoDios/StepProgressbar/blob/master/app/src/main/ic_launcher-playstore.png" alt="drawing" width="160"/>
 
+![Support Platform](https://img.shields.io/static/v1?label=platforms&message=windows%20|%20macos%20|%20linux%20|%20android%20|%20iOS&color=green&style=for-the-badge)
+
 ### Usage
 
 > #### Circle
