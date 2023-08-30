@@ -1,7 +1,6 @@
 package me.sudodios.compose.stepprogress
 
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -16,7 +15,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlin.math.cos
-import kotlin.math.max
 import kotlin.math.sin
 
 @Composable
@@ -25,6 +23,7 @@ fun StepProgressBar(
     spaceSize : Dp = 3.dp,
     steps : Int = 5,
     progressColors : Pair<Color,Color> = Pair(Color.White, Color.Yellow),
+    gradientDegree : Double = 145.0,
     progressBackgroundColor : Color = Color.White.copy(0.2f),
     progressWidth : Dp = 4.dp,
     progressBackgroundWidth : Dp = 4.dp,
@@ -52,7 +51,7 @@ fun StepProgressBar(
             val counter = if (isRtl) (steps - i) - 1 else i
             if (counter < progress.first - 1) {
                 drawArc(
-                    brush = getGradient(listOf(progressColors.first,progressColors.second),145.0,this.size),
+                    brush = getGradient(listOf(progressColors.first,progressColors.second),gradientDegree,this.size),
                     startAngle = finalStartAngle,
                     sweepAngle = lineSizes,
                     useCenter = false,
@@ -63,7 +62,7 @@ fun StepProgressBar(
                 val percentage = lineSizes * (progress.second / 100f)
                 finalStartAngle = if (isRtl) finalStartAngle + (lineSizes * ((100f - progress.second)) / 100f) else finalStartAngle
                 drawArc(
-                    brush = getGradient(listOf(progressColors.first,progressColors.second),145.0,this.size),
+                    brush = getGradient(listOf(progressColors.first,progressColors.second),gradientDegree,this.size),
                     startAngle = finalStartAngle,
                     sweepAngle = percentage,
                     useCenter = false,

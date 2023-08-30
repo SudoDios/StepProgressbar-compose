@@ -59,9 +59,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Screen() {
 
-    var steps by remember { mutableIntStateOf(1) }
-    var progress by remember { mutableFloatStateOf(0f) }
-    var currentStep by remember { mutableIntStateOf(1) }
+    var steps by remember { mutableIntStateOf(6) }
+    var progress by remember { mutableFloatStateOf(60f) }
+    var currentStep by remember { mutableIntStateOf(4) }
 
     Column(
         modifier = Modifier
@@ -76,7 +76,9 @@ fun Screen() {
             steps = steps,
             progressBackgroundWidth = 7.dp,
             progressColors = Pair(Color(0xFFCD7672), Color(0xFFEEB462)),
-            progress = Pair(currentStep,progress)
+            gradientDegree = 145.0,
+            progress = Pair(currentStep,progress),
+            progressBackgroundColor = Color.White.copy(0.2f)
         )
         LineStepProgressBar(
             modifier = Modifier
@@ -88,7 +90,8 @@ fun Screen() {
             steps = steps,
             progressBackgroundWidth = 7.dp,
             progressColors = Pair(Color(0xFFCD7672), Color(0xFFEEB462)),
-            progress = Pair(currentStep,progress)
+            progress = Pair(currentStep,progress),
+            progressBackgroundColor = Color.White.copy(0.2f)
         )
     }
 
