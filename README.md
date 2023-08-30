@@ -13,6 +13,7 @@ make your step progress bar (like instagram stroty indicator) easily on your pro
 >            steps = steps,
 >            progressBackgroundWidth = 7.dp,
 >            progressColors = Pair(Color(0xFFCD7672), Color(0xFFEEB462)),
+>            gradientDegree = 145.0,
 >            progress = Pair(currentStep,progress),
 >            progressBackgroundColor = Color.White.copy(0.2f)
 >  )
